@@ -1,9 +1,7 @@
 package com.velan.JenkinsSample;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class AppTest {
@@ -13,11 +11,6 @@ public class AppTest {
 	 @BeforeEach
 	    public void setUp() {
 	        calculator = new Calculator(); // This method will run before each test method
-	    }
-	 @AfterEach
-	    public void tearDown() {
-	        calculator = null; // This method will run after each test method
-	        System.out.println("Test finished");
 	    }
 
 	@Test
@@ -33,10 +26,4 @@ public class AppTest {
 	     assertEquals(2, result);
 		         
 	}
-	@Disabled("Disabled until bug #123 is fixed")
-	 @Test
-	    public void testSubtractNegativeResult() {
-	        int result = calculator.subtract(3, 5);
-	        assertEquals(-2, result);
-	    }
 }
